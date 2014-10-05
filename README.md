@@ -14,54 +14,66 @@ FFT Export Syntax
 All command-line options are optional. The options are listed below:
  
 `-afile [file]`
-	Audio file, including full path info, to use as input. 
-	Audio can be in any format readable by the Java Media Framework.
-	This includes MP3's and the audio tracks of video files. If not specified 
-	on the command-line, selection is made via a dialog box once the 
-	program starts.
-`-astart [seconds]`
-	Offset (in seconds) into the sound file to begin analysis. 
-	Default is beginning of sound file.
+
+Audio file, including full path info, to use as input. Audio can be in any format readable by the Java Media Framework. If not specified on the command-line, selection is made via a dialog box once the program starts.  
+
+`-astart [seconds]`  
+
+Offset (in seconds) into the sound file to begin analysis. Default is beginning of sound file.  
+
 `-aend [seconds]`
-	Time (in seconds) into the sound file to stop analysis. 
-	Default is end of sound file.
+
+Time (in seconds) into the sound file to stop analysis. Default is end of sound file.
+
 `-ofile [file]`
-	Output analysis file, including full path info. Analysis file is plain text. 
-	If the file already exists, you will be prompted whether you wish to
-	overwrite the existing file. If not specified, selection is made via 
-	a dialog box once the program starts.
+
+Output analysis file, including full path info. Analysis file is plain text. If the file already exists, you will be prompted whether you wish to overwrite the existing file. If not specified, selection is made via a dialog box once the program starts.
+
 `-pow2 [number]`
-	Power of two to use for FFT analysis. 
-	Must be a power of 2 between 256 and 16384. Default is 2048. Larger numbers
-	will create larger, more detailed analysis files, but will require more
-	time to create. Larger numbers will also cause the analysis to 'blur' sounds
-	together somewhat.
+
+Power of two to use for FFT analysis. Must be a power of 2 between 256 and 16384. Default is 2048. Larger numbers will create larger, more detailed analysis files, but will require more time to create. Larger numbers will also cause the analysis to 'blur' sounds together somewhat.
+
 `-cutoff [number]`
-	Hi-frequency cutoff (in Hz). Spectral data higher than the cutoff will be 
+
+Hi-frequency cutoff (in Hz). Spectral data higher than the cutoff will be 
 	ignored and not included in output analysis file. Default is 7000 and 
 	maximum is 20000. 
+	
 `-t [seconds]`
+
 	Specifies how often (in seconds) an FFT snapshot is taken of the sound. 
 	Very small numbers will result in huge analysis files. The default 
 	value of 0.05 seconds will work well for short sounds, but might need to
 	be adjusted for longer sounds.
+	
 `-noham`
+
 	Use rectangular windowing instead of the default Hamming window.
+	
 `-savetemp`
+
 	The program creates a temporary '.au' file during the analysis process.
 	Choosing this option will prevent the temp file from being deleted
 	when the program is closed.
+	
 `-nonverbose`
+
 	Don't write information to command line as portions of the 
 	task are completed.
+	
 `-freqout`
+
 	Write frequency information to analysis file. This makes the file easier
 	to read; this information can also be inferred without writing it explicitly
 	to the file (see below). 
+	
 `-help` or `-man`
+
 	Displays information about command-line options. 
 	All other command-line options will be ignored.
+	
 `-version`
+
 	Displays version information. All other command-line options 
 	will be ignored.
 
