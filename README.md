@@ -69,12 +69,12 @@ Write frequency information to analysis file. This makes the file easier
 	
 `-help` or `-man`
 
-	Displays information about command-line options. 
+Displays information about command-line options. 
 	All other command-line options will be ignored.
 	
 `-version`
 
-	Displays version information. All other command-line options 
+Displays version information. All other command-line options 
 	will be ignored.
 
 About the Analysis File Format
@@ -82,25 +82,24 @@ About the Analysis File Format
 
 The Analysis File is plain-text.
 
-Line 1 - Version Information
-Line 2 - Name of original file
-Line 3 - Information about the temporary file from which the actual analysis is
-	taken
-Line 4 - Power of 2 used for FFT processing
-Line 5 - Hi frequency cutoff
-Line 6 - Windowing used (Rectangular or Hamming)
-
-Line 12 to end - Analysis Frames
+* Line 1 - Version Information
+* Line 2 - Name of original file
+* Line 3 - Information about the temporary file from which the actual analysis is taken
+* Line 4 - Power of 2 used for FFT processing
+* Line 5 - Hi frequency cutoff
+* Line 6 - Windowing used (Rectangular or Hamming)
+* Line 12 to end - Analysis Frames
 
 Each analysis frame consists of four lines.
-	Line 1 - Frame Number
-	Line 2 - Two values, the maximum volume for the frame and the time of the 
+
+* Line 1 - Frame Number
+* Line 2 - Two values, the maximum volume for the frame and the time of the 
 		frame. The maximum volume is the maximum raw sample value for that
 		frame, out of 32678. This is important because frames with very 
 		low volumes contain 'static' and should probably be ignored. The 
 		time reading is simply the time of the middlemost moment of this
 		frame, in seconds.
-	Line 3 - FFT data. This line is a series of numbers separated by spaces.
+* Line 3 - FFT data. This line is a series of numbers separated by spaces.
 		Each number represents the amount of spectral activity at a certain
 		frequency. Values have been scaled to 100, so the most prominent
 		frequency in each frame will have a value of 100. To find the
@@ -112,6 +111,6 @@ Each analysis frame consists of four lines.
 		If you wish to see the frequencies directly, choose the 
 		'-freqout' option. This line then becomes many lines,
 		with the frequencies indicated.
-	Line 4 - Separating space.
+* Line 4 - Separating space.
 		 
 
