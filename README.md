@@ -1,7 +1,7 @@
 FFT Export
 =========
 
-FFT Export is a Java-based command-line program for creating FFT analysis files from audio files. It is heavily based on Spanform, 
+FFT Export is a Java-based command-line program for creating FFT analysis files from audio files. It is heavily based on [Spanform](https://github.com/malictus/spanform), 
 a C++ GUI program for spectral analysis that I wrote previously.
 
 FFT Export was written in 2001 and uses the now-mostly-defunct Java Media Framework; I'm just moving it to GitHub for safe-keeping and in case anyone is interested.
