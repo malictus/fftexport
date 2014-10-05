@@ -41,29 +41,29 @@ Hi-frequency cutoff (in Hz). Spectral data higher than the cutoff will be
 	
 `-t [seconds]`
 
-	Specifies how often (in seconds) an FFT snapshot is taken of the sound. 
+Specifies how often (in seconds) an FFT snapshot is taken of the sound. 
 	Very small numbers will result in huge analysis files. The default 
 	value of 0.05 seconds will work well for short sounds, but might need to
 	be adjusted for longer sounds.
 	
 `-noham`
 
-	Use rectangular windowing instead of the default Hamming window.
+Use rectangular windowing instead of the default Hamming window.
 	
 `-savetemp`
 
-	The program creates a temporary '.au' file during the analysis process.
+The program creates a temporary '.au' file during the analysis process.
 	Choosing this option will prevent the temp file from being deleted
 	when the program is closed.
 	
 `-nonverbose`
 
-	Don't write information to command line as portions of the 
+Don't write information to command line as portions of the 
 	task are completed.
 	
 `-freqout`
 
-	Write frequency information to analysis file. This makes the file easier
+Write frequency information to analysis file. This makes the file easier
 	to read; this information can also be inferred without writing it explicitly
 	to the file (see below). 
 	
